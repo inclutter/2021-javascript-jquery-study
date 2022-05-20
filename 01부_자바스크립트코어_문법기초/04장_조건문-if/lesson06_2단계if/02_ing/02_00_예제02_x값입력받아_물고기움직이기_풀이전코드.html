@@ -57,7 +57,16 @@
             // 버튼에 이벤트 걸기.
             $("#btn_start").click(function() {
                 // 여기에 소스를 입력해주세요.
+                let movingValueString = window.prompt("이동 할 값을 입력해주세요");
+                let movingValueInteger = parseInt(movingValueString);
 
+                if(movingValueInteger <= 430) {
+                    $("#img1").css(
+                        "left", movingValueInteger
+                    )
+                } else {
+                    alert("유효한 값을 입력해주세요.");
+                }
             });
         })
 
