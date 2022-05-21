@@ -19,7 +19,7 @@
         #fish {
             position: absolute;
             left: 50px;
-            top: 120px;
+            bottom: 200px;
         }
 
         #nav {
@@ -62,7 +62,14 @@
                 var y = parseInt($("#txtY").val());
 
                 // 여기에 소스를 입력해주세요.
-
+                if(x > 500 || y > 300) {
+                    alert("입력된 값이 너무 큽니다. 다시 입력후주세요.")
+                } else {
+                    $fish.css({
+                        "left" : x,
+                        "bottom" : y
+                    })
+                }
             });
         })
 

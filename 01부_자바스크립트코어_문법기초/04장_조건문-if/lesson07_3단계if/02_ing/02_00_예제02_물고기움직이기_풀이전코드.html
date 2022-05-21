@@ -56,7 +56,18 @@
             $("#btn_start").click(function() {
 
                 // 여기에 소스를 입력해주세요.
+                let fishMovingValueString = window.prompt("이동할 물고기 위치를 입력해주세요.");
+                let fishMovingValueInteger = parseInt(fishMovingValueString);
 
+                if(fishMovingValueInteger < 0 ) {
+                    alert("0보다 큰 값을 입력해주세요.")
+                } else if(fishMovingValueInteger > 430) {
+                    alert("430보다 작은 값을 입력해주세요.")
+                } else {
+                    $fish.css(
+                        "left", fishMovingValueInteger
+                    )
+                }
             });
         })
 

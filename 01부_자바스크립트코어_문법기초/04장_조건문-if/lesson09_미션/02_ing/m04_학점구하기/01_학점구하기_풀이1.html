@@ -30,10 +30,22 @@
         var value = window.prompt("평균 점수를 입력해주세요.");
 
         // 2. 문자를 숫자로.
-
+        value = parseInt(value);
 
         // 3. 학점 계산 후
         // 4. 학점 출력
+
+        if(value <= 100 && value >= 90) {
+            alert(`${value} 점수의 학점은? A 입니다.`)
+        } else if(value <= 89 && value >= 80) {
+            alert(`${value} 점수의 학점은? B 입니다.`)
+        } else if(value <= 79 && value >= 70) {
+            alert(`${value} 점수의 학점은? C 입니다.`)
+        } else if(value <= 69 && value >= 60) {
+            alert(`${value} 점수의 학점은? D 입니다.`)
+        } else if(value < 60) {
+            alert(`${value} 점수의 학점은? F 입니다.`)
+        }
 
 
     </script>
