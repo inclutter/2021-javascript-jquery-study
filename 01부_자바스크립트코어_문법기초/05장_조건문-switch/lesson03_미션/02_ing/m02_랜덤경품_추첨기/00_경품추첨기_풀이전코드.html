@@ -30,9 +30,24 @@
                 // 버튼에 클릭 이벤트 리스너 등록
                 $("#start").click(function() {
                     // 여기에 소스를 입력해 주세요.
-                })
-            }
+                    let randomResult = parseInt(Math.random()*10)+1;
 
+                    switch (randomResult) {
+                        case 3:
+                            alert(`${randomResult}번 당첨! 냉장고`);
+                            break;
+                        case 5:
+                            alert(`${randomResult}번 당첨! 세탁기`);
+                            break;
+                        case 8:
+                            alert(`${randomResult}번 당첨! TV`);
+                            break;
+                        default:
+                            alert(`${randomResult}번 꽝!`);
+                    }
+
+                })
+            })
         </script>
     </head>
 
