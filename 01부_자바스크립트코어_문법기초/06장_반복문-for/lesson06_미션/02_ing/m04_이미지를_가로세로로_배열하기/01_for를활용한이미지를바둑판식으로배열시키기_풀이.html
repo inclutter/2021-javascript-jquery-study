@@ -52,6 +52,19 @@
 
                 // 여기에 풀이를 입력해주세요.
 
+
+                for (let i = 0; i < length; i++) {
+                    let $img = $images.eq(i);
+
+                    let x = 100+(i%3) * 200;
+                    let y = 100+ parseInt(i/3) * 200;
+
+                    $img.css({
+                        "left" : x,
+                        "top" : y
+                    })
+                }
+
             });
         });
 
