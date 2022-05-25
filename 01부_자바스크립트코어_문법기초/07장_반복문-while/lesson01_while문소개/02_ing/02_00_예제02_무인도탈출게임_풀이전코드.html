@@ -24,7 +24,20 @@
         $(document).ready(function(){
             $("#btnStart").click(function(){
                 // 여기에 소스를 입력해주세요.
+                let i = 1;
+                let randomVal = 0;
+                while (true) {
+                    randomVal = parseInt(Math.random() *10);
 
+
+                    if(randomVal === 3) {
+                        document.write("탈출");
+                        break;
+                    }
+                    console.log(randomVal);
+                    document.write(`${i}번째 나온 숫자 = ${randomVal} <br/>`);
+                    i++
+                }
 
             })
         })

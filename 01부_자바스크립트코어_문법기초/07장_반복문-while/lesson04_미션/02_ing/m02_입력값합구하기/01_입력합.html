@@ -17,8 +17,32 @@
 
 
          */
+        let i = 1;
+        let result = 0;
 
 
+        while (true) {
+            let inputVal = window.prompt(`${i}번째 입력`);
+            if(inputVal === 'end') {
+                break;
+            }
+            if (isNaN(inputVal)) {
+                alert('It was NaN');
+                continue;
+            }
+            if(inputVal === null) {
+                alert('It was null');
+                continue;
+            }
+            if(inputVal === '') {
+                alert('It was empty');
+                continue;
+            }
+            result += parseInt(inputVal);
+            i++
+        }
+
+        alert(`총합 : ${result}`);
 
     </script>
 
