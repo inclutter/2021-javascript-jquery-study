@@ -25,7 +25,20 @@ document.write ("4 결과 = "+calculator("/", 20, 10), "<br>");
 */
 
 
-?
+function calculator(op, num1, num2) {
+    switch (op) {
+        case "+" :
+            return num1+num2;
+        case "-" :
+            return num1-num2;
+        case "*" :
+            return num1*num2;
+        case "/" :
+            return num1/num2;
+        default :
+            return "지원하지 않는 연산자입니다.";
+    }
+}
 
 document.write("1 결과 = "+calculator("+", 20, 10), "<br>");
 document.write("2 결과 = "+calculator("-", 20, 10), "<br>");

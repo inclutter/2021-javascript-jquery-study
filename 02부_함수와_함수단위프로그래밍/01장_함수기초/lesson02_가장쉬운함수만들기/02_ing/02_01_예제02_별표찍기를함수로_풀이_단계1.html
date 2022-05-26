@@ -36,6 +36,19 @@
 
         */
 
+        function printStar(count) {
+            var star = "";
+            for (var i = 1; i <= count; i++) {
+                for (var m = 0; m < i; m++) {
+                    star += "*";
+                }
+                star += "<br>";
+            }
+            document.write(star);
+        }
+
+
+        printStar(10)
 
 
     </script>
