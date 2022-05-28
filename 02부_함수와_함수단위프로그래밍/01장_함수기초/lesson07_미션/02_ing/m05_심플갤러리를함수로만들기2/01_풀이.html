@@ -31,29 +31,36 @@
      캡처한 내용이 아니라 한 화면에 동시에 실행된 화면이니 이에 맞게 처리해 주세요.
      */
         $(document).ready(function(){
+            var $images1 = $("#container1 img");
+            var $images2 = $("#container2 img");
 
-            // 이미지 찾기.
-            var $images = $("#container1 img");
-
-            // 이미지 개수 구하기.
-            var length = $images.length;
-
-            // 이미지 배열하기.
-            for(var i=0;i<length;i++){
-                // n번째 이미지 구하기
-                var $img = $images.eq(i);
-
-                // 위치 값 구하기
-                var x = 100+((i%3)*200);
-                var y = 100+(parseInt(i/3)*200);
-
-                // 위치 설정
-                $img.css({
-                    left:x,
-                    top:y
-                });
-            }
+            simpleGallery($images1, 6, 150, 150);
+            simpleGallery($images2, 4, 200, 200);
         });
+
+
+
+    function simpleGallery($images, num, xVal, yVal) {
+        // 이미지 개수 구하기.
+        var length = $images.length;
+
+        // 이미지 배열하기.
+        for(var i=0;i<length;i++){
+            // n번째 이미지 구하기
+            var $img = $images.eq(i);
+
+            // 위치 값 구하기
+            var x = 100+((i%num)*xVal);
+            var y = 100+(parseInt(i/num)*yVal);
+
+            // 위치 설정
+            $img.css({
+                left:x,
+                top:y
+            });
+        }
+    }
+
 
     </script>
 </head>

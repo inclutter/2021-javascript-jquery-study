@@ -36,7 +36,10 @@
          */
 
         $(document).ready(function(){
+            simpleGallery(4,200,200);
+        });
 
+        function simpleGallery(num, xVal, yVal) {
             // 이미지 찾기.
             var $images = $("#container1 img");
 
@@ -49,8 +52,8 @@
                 var $img = $images.eq(i);
 
                 // 위치 값 구하기
-                var x = 100+((i%3)*200);
-                var y = 100+(parseInt(i/3)*200);
+                var x = 100+((i%num)*xVal);
+                var y = 100+(parseInt(i/num)*yVal);
 
                 // 위치 설정
                 $img.css({
@@ -58,7 +61,7 @@
                     top:y
                 });
             }
-        });
+        }
 
         
     </script>
