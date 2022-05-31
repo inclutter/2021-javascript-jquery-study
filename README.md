@@ -1,8 +1,3 @@
----
-title: 2021-javascript-jquery-study
-toc: true
----
-
 # 2021-javascript-jquery-study
 
 This repository is repository about javascript and jquery study.
@@ -11,8 +6,9 @@ This repository is repository about javascript and jquery study.
 
 ## 목차
 
-[TOC]
-
+- [2021-javascript-jquery-study](#2021-javascript-jquery-study)
+    * [목차](#--)
+        + [01 중첩함수 관련(369p)](#01---------369p-)
 
 
 
