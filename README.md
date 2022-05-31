@@ -7,8 +7,8 @@ This repository is repository about javascript and jquery study.
 ## 목차
 
 - [2021-javascript-jquery-study](#2021-javascript-jquery-study)
-    * [목차](#--)
-        + [01 중첩함수 관련(369p)](#01---------369p-)
+    * [목차](##목차)
+        + [01 중첩함수 관련(369p)](###01-중첩함수-관련(369p))
 
 
 
