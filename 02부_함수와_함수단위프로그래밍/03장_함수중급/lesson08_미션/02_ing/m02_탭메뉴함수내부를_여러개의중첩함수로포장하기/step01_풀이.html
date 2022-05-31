@@ -64,11 +64,16 @@
 		 	- 기능분석
 
 		 */
+
+
 		$(document).ready(function(){
 			// 탭메뉴 코드가 동작할 수 있도록 tabMenu() 함수 호출
 			tabMenu("#tabMenu1");
 			tabMenu("#tabMenu2");
 		});
+
+
+
 
 		function tabMenu(selector){
 			var $tabMenu = null;
@@ -76,24 +81,37 @@
 			// 선택 한 탭메뉴를 저장할 변수
 			var $selectMenuItem =null;
 
-			// 요소 초기화
-			$tabMenu = $(selector);
-			$menuItems = $tabMenu.find("li");
+			init(selector);
+			initEvent();
 
-			// 메뉴 항목에 클릭 이벤트 등록
-			$menuItems.click(function(){
+			function init(selector) {
+				// 요소 초기화
+				$tabMenu = $(selector);
+				$menuItems = $tabMenu.find("li");
+			}
+
+			function initEvent() {
+				// 메뉴 항목에 클릭 이벤트 등록
+				$menuItems.click(function(){
+					selectTab($(this));
+				})
+
+			}
+
+			function selectTab($item) {
 				// 기존 선택 메뉴 항목이 있으면 비선택 상태로 만들기
 				if($selectMenuItem!=null){
 					$selectMenuItem.removeClass("select");
 				}
 
 				// 클릭한 메뉴 항목을 신규 선택 메뉴 항목으로 저장
-				$selectMenuItem = $(this);
+				$selectMenuItem = $item;
 				// 선택 상태로 만들기
 				$selectMenuItem.addClass("select");
-			})
-
+			}
 		}
+
+
 
 
 

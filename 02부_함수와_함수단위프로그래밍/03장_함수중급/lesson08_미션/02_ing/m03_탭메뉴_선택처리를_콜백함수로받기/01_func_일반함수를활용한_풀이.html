@@ -95,6 +95,8 @@
 				$selectMenuItem = $item;
 				// 선택 상태로 만들기
 				$selectMenuItem.addClass("select");
+
+				$("#info").html($selectMenuItem.index());
 			}
 
 			init(selector);
