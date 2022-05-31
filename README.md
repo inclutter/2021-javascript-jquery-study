@@ -12,6 +12,19 @@ This repository is repository about javascript and jquery study.
 
 
 
+
+
+
+
+
+
+
+
+
+<br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
 ### 01 중첩함수 관련(369p)
 
 <- 화살표로 표시된 부분을 참고하자 중첩 함수에서 $(this)가 어떻게 사용되는지 이해하면될 것 같다.
