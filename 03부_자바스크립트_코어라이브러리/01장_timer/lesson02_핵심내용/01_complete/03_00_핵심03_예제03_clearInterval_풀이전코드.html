@@ -37,7 +37,7 @@
             var $output = $("#output");
             var count = 0;
 
-            setInterval(function() {
+            let timerId = setInterval(function() {
                 // 값 증가
                 count++;
                 // 값을 출력
@@ -47,7 +47,7 @@
 
             $("#stop").click(function() {
                 // 여기에 풀이를 입력해주세요.
-
+                clearInterval(timerId);
             });
 
         })
