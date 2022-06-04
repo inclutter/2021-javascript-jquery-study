@@ -38,25 +38,39 @@
 
 
          */
-        $(document).ready(function() {
-            var currentIndex = 1;
-            var imgList1 = ["logo_01.jpg", "logo_02.jpg", "logo_03.jpg", "logo_04.jpg", "logo_05.jpg"];
-            var imgList2 = ["logo_02.jpg", "logo_05.jpg", "logo_03.jpg", "logo_04.jpg", "logo_01.jpg"];
-            var $banner = $("#banner1");
 
+        var imgList1;
+        var imgList2;
+        var $banner;
+        $(document).ready(function() {
+            init();
+            startInterval(1000, imgList1, $banner1);
+            startInterval(3000, imgList2, $banner2);
+        })
+
+
+        function init() {
+            imgList1 = ["logo_01.jpg", "logo_02.jpg", "logo_03.jpg", "logo_04.jpg", "logo_05.jpg"];
+            imgList2 = ["logo_02.jpg", "logo_05.jpg", "logo_03.jpg", "logo_04.jpg", "logo_01.jpg"];
+            $banner1 = $("#banner1");
+            $banner2 = $("#banner2");
+        }
+
+        function startInterval(intervalTime, imgList, $banner) {
+            var currentIndex = 1;
             // 1초에 한번씩 함수 호출
             setInterval(function() {
                 // 다음에 등장할 배너 인덱스 값 구하기
                 currentIndex++;
-                if (currentIndex >= imgList1.length)
+                if (currentIndex >= imgList.length)
                     currentIndex = 0;
 
                 // 다음 이미지 이름 구하기
-                var imgName = imgList1[currentIndex];
+                var imgName = imgList[currentIndex];
                 // 다음 이미지 출력
                 $banner.attr("src", "./images/" + imgName);
-            }, 1000)
-        })
+            }, intervalTime)
+        }
     </script>
 
 </head>
