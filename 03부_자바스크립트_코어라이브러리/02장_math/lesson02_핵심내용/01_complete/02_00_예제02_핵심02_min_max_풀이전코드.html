@@ -16,11 +16,8 @@
          */
         var value = window.prompt("숫자를 입력해주세요.", 0);
 
-        if(value<10)
-         value =10;
-
-        if(value>100)
-            value=100;
+        value = Math.min(value,100);
+        value = Math.max(value, 10);
 
         alert(value);
     </script>

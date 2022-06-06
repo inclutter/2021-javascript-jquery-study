@@ -11,8 +11,13 @@
             $(document).ready(function() {
                 $info = $("#info");
                 // 여기에 코드를 입력해주세요.
-
+                setInterval(randomNum, 500);
             })
+
+            function randomNum() {
+                let num = parseInt(Math.random()*50) + 50;
+                $info.html(num);
+            }
 
         </script>
 

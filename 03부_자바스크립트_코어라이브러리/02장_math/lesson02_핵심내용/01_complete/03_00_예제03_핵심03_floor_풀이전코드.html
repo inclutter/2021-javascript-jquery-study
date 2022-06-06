@@ -14,9 +14,7 @@
 
      */
         var itemCount = 105;
-        var pages = pasrseInt(itemCount/10);
-        if(itemCount%10)
-            pages++;
+        var pages = Math.ceil(itemCount/10);
 
         alert("전체 페이지 수는  = "+pages);   // 결과 11
     </script>
