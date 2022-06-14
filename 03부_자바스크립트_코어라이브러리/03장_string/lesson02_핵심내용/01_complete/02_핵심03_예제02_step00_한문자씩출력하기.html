@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style>
             #output {
                 width: 400px;
@@ -24,6 +25,20 @@
 
                 var $output = $("#output");
                 // 여기에 풀이를 입력해 주세요.
+
+                let idx = 0;
+
+                let timerId = setInterval(function () {
+                    $output.text(str[idx]);
+                    idx++;
+
+                    if(idx > str.length) {
+                        clearInterval(timerId);
+                        alert("종료되었습니다.");
+                    }
+
+                },1000);
+
             })
 
         </script>

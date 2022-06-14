@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
-
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="../../libs/jquery-1.11.0.min.js"></script>
         <script>
             /*
              예제 03: 문자열 위치 알아내기
@@ -9,7 +10,15 @@
              몇 번째 위치에 있는지 출력해 주세요. 존재하지 않는 경우 “문자가 존재하지 않습니다.”라는 메시지를
              출력해 주세요.
              */
+
+            let $info = $("#info");
             var data = window.prompt("문자를 입력해 주세요.");
+            let idx = data.indexOf("sample");
+            if(data.indexOf("sample")) {
+                $info.text(idx);
+            } else {
+                alert(`sample 문자열이 존재하지 않습니다.`)
+            }
 
 
         </script>
