@@ -1,15 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
-
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script>
             /*
              예제 08: 풀이 전 코드에서 data에 들어 있는 - 문자를 제거해 주세요.
 
              */
             var data = "닉네임-딴동네";
-            var result = ?    //<-- 여기에 코드를 작성해
-            주세요.alert(data);
+            var data1 = data.slice(0,3);
+            var data2 = data.slice(4,7);
+            document.write(data1);
+            document.write(data2);
+            var result = `${data1}${data2}`    //<-- 여기에 코드를 작성해
+            alert(data);
 
         </script>
 

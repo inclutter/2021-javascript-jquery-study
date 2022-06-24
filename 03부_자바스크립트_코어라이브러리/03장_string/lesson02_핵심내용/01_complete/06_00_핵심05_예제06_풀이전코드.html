@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
-
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script>
             /*
              예제 06: 특정 위치에 문자 추가하기
@@ -10,7 +10,11 @@
              실행결과 : 닉네임-딴동네
              */
             var data = "닉네임딴동네";
-            var result = ?  // <-- 이 코드를 완성해주세요.
+            var data1 = data.slice(0,3);
+            var data2 = data.slice(3,6);
+            document.write(`1+${data1}`);
+            document.write(`2+${data2}`);
+            result = `${data1}-${data2}`
             alert(result);
 
         </script>
