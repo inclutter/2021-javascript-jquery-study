@@ -49,9 +49,31 @@
         //3자릿수 마다 콤마(,) 추가
         // 예) 1234567 -> 1,234,567
         function won(value){
+            let result = value;
+            let repetition = Math.floor((value.length-1)/3);
+            let resultWon = "";
+            let j = 0;
+            let m = 3;
             // 여기에 소스를 입력해주세요.
+            // 12,345,678
+
+            for (let i = repetition; i >= 0; i--) {
+                let tmp;
+                if(i > 0) {
+                    tmp = result.slice(result.length-m, result.length - j);
+                } else {
+                    tmp = result.slice(0, result.length - j);
+                }
 
 
+                if(i !== 0) {
+                    tmp = `,${tmp}`;
+                }
+                resultWon = tmp+resultWon;
+                j += 3;
+                m += 3;
+            }
+            return resultWon;
         }
     </script>
 </head> 

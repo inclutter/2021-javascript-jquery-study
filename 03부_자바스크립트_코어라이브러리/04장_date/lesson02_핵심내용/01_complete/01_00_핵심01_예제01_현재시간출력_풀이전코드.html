@@ -23,6 +23,12 @@
             $(document).ready(function() {
                 var $output = $("#output");
                 // 여기에 풀이를 입력해주세요.
+                var nowDate = new Date();
+                let hour = nowDate.getHours()
+                let min = nowDate.getMinutes();
+                let sec = nowDate.getSeconds();
+                let milSec = nowDate.getMilliseconds();
+                $output.html(`${hour}:${min}:${sec}:${milSec}`)
 
             })
 

@@ -26,13 +26,20 @@
                 $clock = $("#clock");
 
                 // 시간 출력 함수 호출
-                clock();
+                setInterval(function () {
+                    $clock.html(clock());
+                }, 1000);
+
 
             });
 
             function clock() {
                 // 여기에 풀이를 입력해주세요.
-
+                let nowDate = new Date();
+                let hour = nowDate.getHours();
+                let min = nowDate.getMinutes();
+                let sec = nowDate.getSeconds();
+                return `${hour}:${min}:${sec}`;
             }
 
         </script>

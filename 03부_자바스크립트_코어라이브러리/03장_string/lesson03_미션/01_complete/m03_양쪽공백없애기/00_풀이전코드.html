@@ -47,9 +47,27 @@ $(document).ready(function(){
 
 
 // 앞쪽 공백문자를 제거하는 함수 
-function ltrim(str){    
+function ltrim(str){
+    let lIdx = 0;
+    let rIdx = 0;
+    let result = str;
     // 여기에 소스를 입력해주세요.
-    
+
+    for (lIdx = 0; lIdx < result.length; lIdx++) {
+        if(result[lIdx] !== '_') {
+            result = result.slice(lIdx, result.length);
+            break;
+        }
+    }
+
+    for (rIdx = 0; rIdx < result.length; rIdx++) {
+        if(result[rIdx] === '_') {
+            result = result.slice(0, rIdx);
+            break;
+        }
+    }
+
+    return result;
 }
 
 
